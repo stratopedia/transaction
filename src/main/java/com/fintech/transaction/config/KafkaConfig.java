@@ -2,6 +2,8 @@ package com.fintech.transaction.config;
 
 import com.fasterxml.jackson.databind.deser.std.StringDeserializer;
 import com.fintech.transaction.model.Transaction;
+
+import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
