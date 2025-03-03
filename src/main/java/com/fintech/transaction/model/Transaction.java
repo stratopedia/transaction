@@ -1,22 +1,20 @@
 package com.fintech.transaction.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String senderAccount;
-    private String receiverAccount;
+    private String sender;
+    private String receiver;
     private Double amount;
     private String currency;
-    private LocalDateTime timestamp;
+    private String type;
+    private String status;
+    private LocalDateTime createdAt = LocalDateTime.now();
 }
-
